@@ -1,9 +1,9 @@
 <?php
    # la bdd
    $host = "localhost";
-   $db_name = "languages";
+   $db_name = "langages";
    $username = "root";
-   $password = "";
+   $password = "root";
    
        try {
            $conn = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);

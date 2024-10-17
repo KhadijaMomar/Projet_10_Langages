@@ -6,7 +6,7 @@
   
 
     class User{
-            public $title = "Classement des langages 2024";
+            public $_title = "Classement des langages 2024";
             
 
         

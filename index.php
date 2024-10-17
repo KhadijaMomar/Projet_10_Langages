@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/reset.css">
+    <?php require_once 'Controller/baseController.php' ?>
 </head>
 <body>
     <main>
@@ -13,77 +14,30 @@
             <table>
                 <!--Caption c'est pour mettre le titre-->
                 <caption>
-                    Classement des langages
+                Classement des langages 2024
+                   
                 </caption>
                 <thead>
                     <tr>
-                        <th>items1</th>
-                        <th>items2</th>
-                        <th>items3</th>
-                        <th>items4</th>
+                        <th>Id</th>
+                        <th>Langage</th>
+                        <th>Description</th>
+                        <th>Utilisation_principale</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach ($users as $user): ?>
                     <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
+                        
+                        <?= 
+                            "<td>".htmlspecialchars($user['id_rang'])."</td>
+                            <td>".htmlspecialchars($user['langage'])."</td>
+                            <td>".htmlspecialchars($user['description'])."</td>
+                            <td>".htmlspecialchars($user['utilisation_principale'])."</td>" 
+                        ?>
+                    
                     </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
-                    <tr>
-                        <td>content 1</td>
-                        <td>content 2</td>
-                        <td>content 3</td>
-                        <td>content 4</td>
-                    </tr>
+                <?php endforeach; ?>  
                 </tbody>
             </table>
         </div>
